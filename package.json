@@ -1,0 +1,15 @@
+{
+  "name": "node-picubes",
+  "version": "1.0.0",
+  "description": "Pi-Cubes Modular Raspberry Pi HVAC System Node Module. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dalibor Zaric <dal@cube-controls.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.4.2",
+    "i2c-bus": "^0.11.2"
+  }
+}
