@@ -14,3 +14,22 @@ I2C has to be configured on Raspberry Pi :
 
 [www.cube-controls.com/blog/how-to-enable-i2c-on-raspberry-pi](http://www.cube-controls.com/blog/how-to-enable-i2c-on-raspberry-pi)
 
+## Control Pi-Cubes DO4 Module
+
+```js
+var pic = require('picubes');
+
+pic.writeDO(1,1,value,function(err){
+	            if (err) console.log(err);
+   	          });
+```
+
+### picubes.writeDO(module, output, value, callback)
+
+- module - Module address(1 - 6)
+- output - Output number(1 - 4)
+- value  - Digital output value :
+            0 = Off
+            1 = On
+- callback - The callback gets one argument (err).
+
