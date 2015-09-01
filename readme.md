@@ -29,8 +29,8 @@ pic.writeDO(1,1,value,function(err){
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
 - value  - Digital output value :
-			- 0 = Off
-			- 1 = On
+  - 0 = Off
+  - 1 = On
 - callback - The callback gets one argument (err).
 
 ## Control Pi-Cubes UO4 Module
