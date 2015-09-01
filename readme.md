@@ -30,7 +30,7 @@ pic.writeDO(1,1,value,function(err){
 - output - Output number(1 - 4)
 - value  - Digital output value :
             0 = Off
-            1 = On
+			1 = On
 - callback - The callback gets one argument (err).
 
 ## Control Pi-Cubes UO4 Module
@@ -49,11 +49,11 @@ pic.writeUO(1,1,0,value,function(err){
 - output - Output number(1 - 4)
 - type   - Universal output type :
 			 0 = Digital Output(0 / 12VDC)
-             1 = Modulation(0 - 10VDC)
-             2 - 255 = Digital otput PWM with this period in sec.
+			 1 = Modulation(0 - 10VDC)
+			 2 - 255 = Digital otput PWM with this period in sec.
 - value  - Universal output value :
              0 / 1 = For digital type
-             0 - 100 % = for Modulation / PWM
+			 0 - 100 % = for Modulation / PWM
 - callback - The callback gets one argument (err).
 
 ## Read Pi-Cubes UI4 Module
@@ -75,9 +75,9 @@ pic.readUI(3,1,1,function(err,data)
 - output - Output number(1 - 4)
 - type   - Input type
               0 = Resistance(Return value 0 - 350000)
-              1 = Digital(Return value 0 - 1)
+			  1 = Digital(Return value 0 - 1)
               2 = Voltage / Current(Return value 0 - 100 % , represent 0 - 10V / 0 - 20mA)
-              3 = 10K Type II Thermistor(Return value - 4000 to 14000, scale 0.01)
-              4 = Pulse Input(Return value is counter value)
+			  3 = 10K Type II Thermistor(Return value - 4000 to 14000, scale 0.01)
+			  4 = Pulse Input(Return value is counter value)
 - callback - The callback gets two argument (err,data).
 
