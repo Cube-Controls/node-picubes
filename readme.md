@@ -17,9 +17,9 @@ I2C has to be configured on Raspberry Pi :
 ## Control Pi-Cubes DO4 Module
 
 ```js
-var pic = require('picubes');
+var pic = require('node-picubes');
 
-pic.writeDO(1,1,value,function(err){
+pic.writeDO(1,1,1,function(err){
 	            if (err) console.log(err);
    	          });
 ```
@@ -36,9 +36,9 @@ pic.writeDO(1,1,value,function(err){
 ## Control Pi-Cubes UO4 Module
 
 ```js
-var pic = require('picubes');
+var pic = require('node-picubes');
 
-pic.writeUO(1,1,0,value,function(err){
+pic.writeUO(1,1,0,1,function(err){
 	              if (err) console.log(err);
    	             });
 ```
@@ -59,7 +59,7 @@ pic.writeUO(1,1,0,value,function(err){
 ## Read Pi-Cubes UI4 Module
 
 ```js
-var pic = require('picubes');
+var pic = require('node-picubes');
 
 pic.readUI(3,1,1,function(err,data)
                  {
