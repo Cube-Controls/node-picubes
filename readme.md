@@ -22,9 +22,13 @@ var pic = require('node-picubes');
 pic.writeDO(1,1,1,function(err){
 	            if (err) console.log(err);
    	          });
+			  
+pic.writeDOSync(1,1,1);			  
+			  
 ```
 
-### picubes.writeDO(module, output, value, callback)
+### picubes.writeDO(module, output, value, callback) - Async version
+### picubes.writeDOSync(module, output, value )      - Sync version
 
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
@@ -41,9 +45,12 @@ var pic = require('node-picubes');
 pic.writeUO(1,1,0,1,function(err){
 	              if (err) console.log(err);
    	             });
+pic.writeUOSync(1,1,0,1);					 
+				 
 ```
 
-### picubes.writeUO(module, output, type, value, callback)
+### picubes.writeUO(module, output, type, value, callback) - Async version
+### picubes.writeUOSync(module, output, type, value)       - Sync version
 
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
@@ -67,9 +74,13 @@ pic.readUI(3,1,1,function(err,data)
                     console.log('Data:'+data);
    	             }
           );
+		  
+data = pic.readUISync(3,1,1);
+if (data != null) console.log('Data:'+data);		  
 ```
 
-### picubes.readUI(module, input, type, callback)
+### picubes.readUI(module, input, type, callback) - Async version
+### picubes.readUISync(module, input, type)       - Sync version
 
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
@@ -80,4 +91,51 @@ pic.readUI(3,1,1,function(err,data)
   - 3 = 10K Type II Thermistor(Return value - 4000 to 14000, scale 0.01)
   - 4 = Pulse Input(Return value is counter value)
 - callback - The callback gets two argument (err,data).
+
+
+## Read Pi-Cubes CTA Module
+
+```js
+var pic = require('node-picubes');
+
+pic.readCTA(1,0,function (err,data)
+				   {
+				      if (err) console.log(err);
+				      console.log('Data:', data);
+				   }
+				   );
+		  
+data = pic.readCTASync(1,0);
+if (data != null) console.log('Data:'+data);		  
+```
+
+### picubes.readCTA(slave, addr, callback) - Async version
+### picubes.readCTASync(slave, addr)       - Sync version
+
+- slave - Modbus slave address for CTA
+- addr  - Holding register address
+- callback - The callback gets two argument (err,data).
+
+
+## Write to Pi-Cubes CTA Module
+
+```js
+var pic = require('node-picubes');
+
+pic.writeCTA(1,31,256,function (err)
+				   {
+				      if (err) console.log(err);
+				   }
+				   );
+		  
+data = pic.writeCTASync(1,31,256);
+```
+
+### picubes.writeCTA(slave, addr, value, callback) - Async version
+### picubes.writeCTASync(slave, addr, value)       - Sync version
+
+- slave - Modbus slave address for CTA
+- addr  - Holding register address
+- value - Regsiter value to write
+- callback - The callback gets one argument (err).
 
