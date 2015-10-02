@@ -27,8 +27,8 @@ pic.writeDOSync(1,1,1);
 			  
 ```
 
-### picubes.writeDO(module, output, value, callback) - Async version
-### picubes.writeDOSync(module, output, value )      - Sync version
+#### picubes.writeDO(module, output, value, callback) - Async version
+#### picubes.writeDOSync(module, output, value )      - Sync version
 
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
