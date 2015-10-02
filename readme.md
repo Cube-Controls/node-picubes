@@ -49,8 +49,8 @@ pic.writeUOSync(1,1,0,1);
 				 
 ```
 
-### picubes.writeUO(module, output, type, value, callback) - Async version
-### picubes.writeUOSync(module, output, type, value)       - Sync version
+#### picubes.writeUO(module, output, type, value, callback) - Async version
+#### picubes.writeUOSync(module, output, type, value)       - Sync version
 
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
@@ -79,8 +79,8 @@ data = pic.readUISync(3,1,1);
 if (data != null) console.log('Data:'+data);		  
 ```
 
-### picubes.readUI(module, input, type, callback) - Async version
-### picubes.readUISync(module, input, type)       - Sync version
+#### picubes.readUI(module, input, type, callback) - Async version
+#### picubes.readUISync(module, input, type)       - Sync version
 
 - module - Module address(1 - 6)
 - output - Output number(1 - 4)
@@ -109,8 +109,8 @@ data = pic.readCTASync(1,0);
 if (data != null) console.log('Data:'+data);		  
 ```
 
-### picubes.readCTA(slave, addr, callback) - Async version
-### picubes.readCTASync(slave, addr)       - Sync version
+#### picubes.readCTA(slave, addr, callback) - Async version
+#### picubes.readCTASync(slave, addr)       - Sync version
 
 - slave - Modbus slave address for CTA
 - addr  - Holding register address
@@ -131,8 +131,8 @@ pic.writeCTA(1,31,256,function (err)
 data = pic.writeCTASync(1,31,256);
 ```
 
-### picubes.writeCTA(slave, addr, value, callback) - Async version
-### picubes.writeCTASync(slave, addr, value)       - Sync version
+#### picubes.writeCTA(slave, addr, value, callback) - Async version
+#### picubes.writeCTASync(slave, addr, value)       - Sync version
 
 - slave - Modbus slave address for CTA
 - addr  - Holding register address
