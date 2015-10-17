@@ -139,3 +139,9 @@ data = pic.writeCTASync(1,31,256);
 - value - Regsiter value to write
 - callback - The callback gets one argument (err).
 
+
+License
+----
+
+MIT
+
