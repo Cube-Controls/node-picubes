@@ -11,6 +11,7 @@
 #include <sys/ioctl.h>			
 #include <fcntl.h>
 #include <linux/i2c-dev.h>
+#include <unistd.h>
 
 using v8::Function;
 using v8::Local;
