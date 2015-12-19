@@ -1,6 +1,6 @@
 {
   "name": "node-picubes",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Pi-Cubes Modular Raspberry Pi HVAC System Node Module. ",
   "main": "index.js",
   "scripts": {

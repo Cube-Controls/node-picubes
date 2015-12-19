@@ -42,9 +42,11 @@ class readCTAWorker : public AsyncWorker {
     }
 	
 	// read value from modbus
-	if (readHoldingRegister(slaveaddr, regaddr, &value, 1000) < 0)  
+	if (readHoldingRegister(slaveaddr, regaddr, &value, 2000) < 0)  
     {				
 		SetErrorMessage("Failed to read register from modbus device !");
+		// Close Port
+		closeModbus();
 		return;  
     }
 	
@@ -105,8 +107,10 @@ NAN_METHOD(readCTASync) {
     }
 	
 	// read value from modbus
-	if (readHoldingRegister(slaveaddr, regaddr, &value, 1000) < 0)  
+	if (readHoldingRegister(slaveaddr, regaddr, &value, 2000) < 0)  
     {				
+		// Close Port
+		closeModbus();	
 		return;
     }
 	
