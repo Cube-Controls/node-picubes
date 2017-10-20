@@ -1,6 +1,6 @@
 {
   "name": "node-picubes",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "Pi-Cubes Modular Raspberry Pi HVAC System Node Module. ",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,6 @@
   "author": "Dalibor Zaric <dal@cube-controls.com>",
   "license": "MIT",  
   "dependencies": {
-    "nan": "2.0.9"
+    "nan": "2.7.0"
   }
 }
